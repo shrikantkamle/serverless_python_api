@@ -1,6 +1,5 @@
-service: serverless-python-api
+service: dummy-rest-api
 frameworkVersion: "3"
-
 
 provider:
   name: aws
@@ -11,5 +10,5 @@ functions:
     handler: handler.hello
     events:
       - httpApi:
-          path: /
+          path: /get
           method: get
