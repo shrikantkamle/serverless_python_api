@@ -13,7 +13,7 @@ import json
 from urllib.request import urlopen
 from config import base_url
 
-def lambda_handler(event, context):
+def hello(event, context):
     # TODO implement
     url = "https://jsonplaceholder.typicode.com/todos/1"
     with urlopen(url) as response:
