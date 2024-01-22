@@ -1,0 +1,33 @@
+service: aws-dummy-rest-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.10
+          
+
+functions:
+  get:
+    handler: posts/get.get
+    events:
+      - http:
+          path: posts/{id}  
+          method: get
+  getall:
+    handler: posts/get.getall
+    events:
+      - http:
+          path: posts
+          method: get          
+  getcomment:
+    handler: posts/get.getcomment
+    events:
+      - http:
+          path: posts/{id}/comments
+          method: get                    
+  add:
+    handler: posts/post.add
+    events:
+      - http:
+          path: posts
+          method: post               
